@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gcc -o hw4.exe hw4.c
+./hw4.exe
