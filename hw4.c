@@ -70,10 +70,19 @@ int main()
 			read(newsockfd,buffer,255);
 			if(counter == 0){
 				write(sockfd1,buffer,strlen(buffer));
+				bzero(buffer,256);
+				read(sockfd1,buffer,255);
+				write(newsockfd,buffer,strlen(buffer));
 			} else if(counter == 1){
 				write(sockfd2,buffer,strlen(buffer));
+				bzero(buffer,256);
+				read(sockfd2,buffer,255);
+				write(newsockfd,buffer,strlen(buffer));
 			} else {
 				write(sockfd3,buffer,strlen(buffer));
+				bzero(buffer,256);
+				read(sockfd3,buffer,255);
+				write(newsockfd,buffer,strlen(buffer));
 			}
 			//dostuff(newsockfd);
 			exit(0);
